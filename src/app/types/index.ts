@@ -10,4 +10,8 @@ export interface Products {
         rate: number,
         count: number
     }
+} 
+
+export interface CartItem extends Products {
+  quantity: number;
 }

@@ -1,4 +1,5 @@
 import type { Products } from "../../types/index";
+import { ProductGrid } from "../../Components/Productgrid";
 import Link from "next/link";
 
 type Props = {
@@ -14,6 +15,8 @@ async function getProduct(id: string): Promise<Products> {
 export default async function ProductPage({ params }: Props) {
   const { id } = await params;
   const product = await getProduct(id);
+
+  
 
   return (
     <main className="p-6">
